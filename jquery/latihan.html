@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta name="viewport" content="width, initial-scale=1"/>
+	<link rel=stylesheet href=jmobile/jquery.mobile-1.4.5.css >
+	<script src=jmobile/jquery.js></script>
+	<script src="jmobile/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+
+<div data-role="tabs" id="win1">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#one" data-ajax="false">one</a></li>
+      <li><a href="#two" data-ajax="false">two</a></li>
+      <li><a href="ajax-content-ignore.html" data-ajax="false">three</a></li>
+    </ul>
+  </div>
+  <div id="one" class="ui-body-d ui-content">
+    <h1>First tab contents</h1>
+
+  </div>
+  <div id="two">
+    <ul data-role="listview" data-inset="true">
+        <li><a href="#">Acura</a></li>
+        <li><a href="#">Audi</a></li>
+        <li><a href="#">BMW</a></li>
+        <li><a href="#">Cadillac</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+	<a href=#win2 data-transition=popup> goto window 2</a>
+  </div>
+
+</div>
+
+<div data-role="tabs" id="win2">
+	<a href=#win1 data-transition=slidedown data-direction="reverse"> goto window 1</a>
+</div>
+
+</body>
+
+</html>
